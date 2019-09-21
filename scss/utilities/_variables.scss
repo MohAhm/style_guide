@@ -1,0 +1,79 @@
+// =============================================
+//              Global Variables               
+// =============================================
+
+// Font Stacks
+$font-url--google : 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+
+$font-family : 'Lato',
+'Helvetica Neue',
+Helvetica,
+Arial,
+sans-serif;
+
+// Font Weights
+$font-weight--thin          : 100;
+$font-weight--light         : 300;
+$font-weight--medium        : 400;
+$font-weight--bold          : 700;
+$font-weight--ultra-bold    : 900;
+
+// Descriptive Base Colors
+$white  : #FFF;
+$grey   : #777;
+
+$viking             : #58E1C1;
+$purple-majesty     : #927BC1;
+$coral              : #FF7856;
+$french-lilac       : #DED2EE;
+$anakiwa            : #7EE6FD;
+$vista-blue         : #88D9A0;
+$fountain-blue      : #4DA2BB;
+$sea-pink           : #EC9FA3;
+$vivid-tangerine    : #FD9F85;
+$sunglo             : #E4757A;
+$emerald            : #63CC82;
+$malibu             : #51DDFC;
+$riptide            : #80E8D1;
+
+// Color Usage
+$color-primary      : $viking;
+$color-secondary    : $malibu;
+
+// Color Palette Modifiers
+$color-palettes: (
+    grey: (
+        xx-light    : lighten($grey, 43%),
+        x-light     : lighten($grey, 35%),
+        light       : lighten($grey, 12%),
+        base        : $grey,
+        dark        : darken($grey, 8%),
+        x-dark      : darken($grey, 16%)
+    ),
+);
+
+// UI Colors
+$ui-colors: (
+    default     : $malibu,
+    success     : $emerald,
+    error       : $sunglo,
+    warning     : $coral,
+    info        : $purple-majesty
+);
+
+// Text
+$base__font-size    : 16px;
+$base__line         : 24px;
+
+// Border radius
+$br--default     : .35em;
+$br--round       : 50%;
+
+// Grid
+$g-col-width        : 65px;
+$g-gutter-width     : 20px;
+$g-col-count        : 12;
+$g-cont-max-w       : 1050px;
+
+// Breakpoints
+$tablet    : 768px;

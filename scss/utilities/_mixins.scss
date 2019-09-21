@@ -1,0 +1,29 @@
+// =============================================
+//              Mixins                     
+// ============================================= 
+
+@mixin flexbox($disp: flex, $dir: null, $just: null, $align: null) {
+    display: $disp;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $align;
+}
+
+// Media queries
+@mixin mq($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+// Generate modifier color classes
+@mixin bg-colors($map) {
+
+    @each $key,
+    $color in $map {
+        &.#{$key} {
+            background-color: $color;
+        }
+    }
+
+}
