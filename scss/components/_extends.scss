@@ -1,0 +1,39 @@
+// ============================================= 
+//              Extends                           
+// ============================================= 
+
+// Navbar
+%nav-link {
+    text-align: center;
+    border-radius: $br--default;
+    padding: em(10px) 0;
+    display: block;
+    width: 100%;
+    color: $grey;
+    transition:
+        background-color $trns-duration ease-in-out,
+        color $trns-duration ease-in-out;
+
+    &:hover {
+        color: $white;
+        background-color: $color-primary;
+    }
+}
+
+// Buttons
+%btn {
+    width: 100%;
+    color: $white;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    border-radius: $br--default;
+
+}
+
+// Image
+%img-disp {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

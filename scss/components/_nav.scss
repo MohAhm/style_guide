@@ -3,32 +3,19 @@
 // ============================================= 
 
 .nav {
+    @include flexbox($dir: column);
     padding: em(20px) 0;
     flex-basis: 100%;
-    @include flexbox($dir: column);
 
     &-link {
-        text-align: center;
-        border-radius: $br--default;
-        padding: em(10px) 0;
-        display: block;
-        width: 100%;
-        color: palette(grey);
-        transition:
-            background-color .2s ease-in-out,
-            color .2s ease-in-out;
-
-        &:hover {
-            color: $white;
-            background-color: $color-primary;
-        }
+        @extend %nav-link;
     }
 
     @include mq($tablet) {
         @include flexbox(flex, row, flex-end, center);
 
         &-link {
-            flex-basis: 100px;
+            flex-basis: em(100px);
         }
     }
 }

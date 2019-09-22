@@ -1,0 +1,64 @@
+// ============================================= 
+//              Grid System                      
+// ============================================= 
+
+.container {
+    padding: 0 em(10px);
+
+    @include mq($tablet) {
+        max-width: $max-width;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.row {
+    @include flexbox($dir: column);
+    padding: 1em em(10px);
+
+    @include mq($tablet) {
+        @include flexbox($dir: row);
+    }
+}
+
+[class^=col] {
+    margin-top: em(10px);
+    flex-basis: 100%;
+    min-height: em(25px);
+    padding: em(10px);
+    border-radius: $br--default;
+
+    @include mq($tablet) {
+        @include flexbox($just: center);
+        margin-top: 0;
+        align-items: center;
+
+        &+& {
+            margin-left: em(10px);
+        }
+    }
+}
+
+.theme {
+    @include bg-colors($theme-colors);
+}
+
+.card {
+    flex-basis: 100%;
+}
+
+
+.centered {
+    @include mq($tablet) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.col {
+    @include mq($tablet) {
+        @include g-columns;
+    }
+}

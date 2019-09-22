@@ -3,15 +3,17 @@
 // ============================================= 
 
 .btn {
+    @include bg-colors($btn-colors);
+    @extend %btn;
     margin-top: em(15px);
-    width: 100%;
-    color: $white;
-    border: none;
     padding: em(10px) 0;
-    text-transform: uppercase;
-    border-radius: $br--default;
+    
+    transition: background-color $trns-duration ease-in-out,
+                color $trns-duration ease-in-out;
 
-    @include bg-colors($ui-colors);
+    &:hover {
+        background-color: red;
+    }
 
     @include mq($tablet) {
         padding: em(10px) em(30px);

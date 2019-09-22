@@ -2,6 +2,7 @@
 //              Mixins                     
 // ============================================= 
 
+// Create a flex container
 @mixin flexbox($disp: flex, $dir: null, $just: null, $align: null) {
     display: $disp;
     flex-direction: $dir;
@@ -18,12 +19,19 @@
 
 // Generate modifier color classes
 @mixin bg-colors($map) {
-
     @each $key,
     $color in $map {
         &.#{$key} {
             background-color: $color;
         }
     }
+}
 
+// Calculate gird columns
+@mixin g-columns {
+    @for $i from 1 through $g-col-count {
+        &-#{$i} {
+            flex-basis: $i / $g-col-count * 100%;
+        }
+    }
 }

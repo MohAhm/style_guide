@@ -18,14 +18,16 @@ $font-weight--medium        : 400;
 $font-weight--bold          : 700;
 $font-weight--ultra-bold    : 900;
 
+
 // Descriptive Base Colors
-$white  : #FFF;
-$grey   : #777;
+$white          : #FFF;
+$grey           : #777;
+$grey-light     : lighten(#777777, 33.33);
 
 $viking             : #58E1C1;
 $purple-majesty     : #927BC1;
-$coral              : #FF7856;
-$french-lilac       : #DED2EE;
+$coral              : #FD7856;
+$french-lilac       : #DEB2EE;
 $anakiwa            : #7EE6FD;
 $vista-blue         : #88D9A0;
 $fountain-blue      : #4DA2BB;
@@ -40,26 +42,30 @@ $riptide            : #80E8D1;
 $color-primary      : $viking;
 $color-secondary    : $malibu;
 
-// Color Palette Modifiers
-$color-palettes: (
-    grey: (
-        xx-light    : lighten($grey, 43%),
-        x-light     : lighten($grey, 35%),
-        light       : lighten($grey, 12%),
-        base        : $grey,
-        dark        : darken($grey, 8%),
-        x-dark      : darken($grey, 16%)
-    ),
-);
-
 // UI Colors
-$ui-colors: (
+$btn-colors: (
     default     : $malibu,
     success     : $emerald,
     error       : $sunglo,
     warning     : $coral,
     info        : $purple-majesty
 );
+
+$theme-colors: (
+    col-1       : $purple-majesty,
+    col-2       : $coral,
+    col-3       : $french-lilac,
+    col-4       : $anakiwa,
+    col-5       : $vista-blue,
+    col-6       : $fountain-blue,
+    col-7       : $sea-pink,
+    col-8       : $vivid-tangerine,
+    col-9       : $sunglo,
+    col-10      : $emerald,
+    col-11      : $malibu,
+    col-12      : $riptide
+);
+
 
 // Text
 $base__font-size    : 16px;
@@ -69,11 +75,14 @@ $base__line         : 24px;
 $br--default     : .35em;
 $br--round       : 50%;
 
+// Transitions
+$trns-duration   : .2s;
+
 // Grid
-$g-col-width        : 65px;
-$g-gutter-width     : 20px;
-$g-col-count        : 12;
-$g-cont-max-w       : 1050px;
+$g-col-count    : 12;
 
 // Breakpoints
-$tablet    : 768px;
+$tablet     : 768px;
+
+// Layout
+$max-width  : 1400px;
