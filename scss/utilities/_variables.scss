@@ -22,7 +22,7 @@ $font-weight--ultra-bold    : 900;
 // Descriptive Base Colors
 $white          : #FFF;
 $grey           : #777;
-$grey-light     : lighten(#777777, 33.33);
+$grey-light     : lighten($grey, 33.33%);
 
 $viking             : #58E1C1;
 $purple-majesty     : #927BC1;
@@ -52,28 +52,26 @@ $btn-colors: (
 );
 
 $theme-colors: (
-    col-1       : $purple-majesty,
-    col-2       : $coral,
-    col-3       : $french-lilac,
-    col-4       : $anakiwa,
-    col-5       : $vista-blue,
-    col-6       : $fountain-blue,
-    col-7       : $sea-pink,
-    col-8       : $vivid-tangerine,
-    col-9       : $sunglo,
-    col-10      : $emerald,
-    col-11      : $malibu,
-    col-12      : $riptide
+    $purple-majesty,
+    $coral,
+    $french-lilac,
+    $anakiwa,
+    $vista-blue,
+    $fountain-blue,
+    $sea-pink,
+    $vivid-tangerine,
+    $sunglo,
+    $emerald,
+    $malibu,
+    $riptide
 );
-
 
 // Text
 $base__font-size    : 16px;
 $base__line         : 24px;
 
 // Border radius
-$br--default     : .35em;
-$br--round       : 50%;
+$br--default     : 5px;
 
 // Transitions
 $trns-duration   : .2s;

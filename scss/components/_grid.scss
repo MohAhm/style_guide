@@ -4,12 +4,10 @@
 
 .container {
     padding: 0 em(10px);
+    @extend .centered;
 
     @include mq($tablet) {
         max-width: $max-width;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -27,7 +25,7 @@
     flex-basis: 100%;
     min-height: em(25px);
     padding: em(10px);
-    border-radius: $br--default;
+    border-radius: em($br--default);
 
     @include mq($tablet) {
         @include flexbox($just: center);
@@ -40,25 +38,15 @@
     }
 }
 
-.theme {
-    @include bg-colors($theme-colors);
+.col {
+    @include theme-bg-colors($theme-colors);
+
+    @include mq($tablet) {
+        @include g-columns;
+    }
 }
 
 .card {
     flex-basis: 100%;
 }
 
-
-.centered {
-    @include mq($tablet) {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-.col {
-    @include mq($tablet) {
-        @include g-columns;
-    }
-}

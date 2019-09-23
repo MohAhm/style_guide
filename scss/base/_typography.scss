@@ -10,6 +10,7 @@
 body {
     font-family: $font-family;
     color: $grey;
+    font-size: em($base__font-size);
 }
 
 p {
@@ -29,7 +30,7 @@ a {
 
     &-primary {
         color: $color-primary;
-        margin-left: em(10px);
+        margin-left: em(10px, 32px); // 32px (2em): font-size of -primary
     }
 
     &-secondary {
@@ -42,8 +43,8 @@ a {
     font-size: em(24px);
     font-weight: $font-weight--light;
     font-style: italic;
-    margin-left: em(20px);
-    padding-left: em(20px);
-    border-left: em(8px) solid $color-primary;
-    border-radius: $br--default;
+    margin-left: em(20px, 24px);
+    padding-left: em(20px, 24px);
+    border-left: em(8px, 24px) solid $color-primary;
+    border-radius: em($br--default, 24px);
 }

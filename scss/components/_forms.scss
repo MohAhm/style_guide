@@ -11,7 +11,7 @@
         margin: em(10px) auto 0;
         border: none;
         padding: em(10px);
-        border-bottom: $br--default solid $color-primary;
+        border-bottom: em($br--default) solid $color-primary;
 
         &:focus {
             outline: 0;

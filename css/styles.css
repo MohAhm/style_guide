@@ -310,7 +310,8 @@ template {
 
 body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #777; }
+  color: #777;
+  font-size: 1em; }
 
 p {
   line-height: 1.5em; }
@@ -323,7 +324,7 @@ a {
 
 .headline-primary {
   color: #58E1C1;
-  margin-left: 0.625em; }
+  margin-left: 0.3125em; }
 .headline-secondary {
   font-weight: 300; }
 
@@ -331,14 +332,14 @@ a {
   font-size: 1.5em;
   font-weight: 300;
   font-style: italic;
-  margin-left: 1.25em;
-  padding-left: 1.25em;
-  border-left: 0.5em solid #58E1C1;
-  border-radius: 0.35em; }
+  margin-left: 0.8333333333em;
+  padding-left: 0.8333333333em;
+  border-left: 0.3333333333em solid #58E1C1;
+  border-radius: 0.2083333333em; }
 
 .nav-link {
   text-align: center;
-  border-radius: 0.35em;
+  border-radius: 0.3125em;
   padding: 0.625em 0;
   display: block;
   width: 100%;
@@ -354,12 +355,19 @@ a {
   cursor: pointer;
   border: none;
   text-transform: uppercase;
-  border-radius: 0.35em; }
+  border-radius: 0.3125em;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
 
 .img-avatar, .img-frame, .img-logo {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+@media (min-width: 768px) {
+  .centered, .container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; } }
 
 .nav {
   display: flex;
@@ -377,20 +385,27 @@ a {
 
 .btn {
   margin-top: 0.9375em;
-  padding: 0.625em 0;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
+  padding: 0.625em 0; }
   .btn.default {
     background-color: #51DDFC; }
+    .btn.default:hover {
+      background-color: #9cecfd; }
   .btn.success {
     background-color: #63CC82; }
+    .btn.success:hover {
+      background-color: #9ddfb0; }
   .btn.error {
     background-color: #E4757A; }
+    .btn.error:hover {
+      background-color: #f1b5b8; }
   .btn.warning {
     background-color: #FD7856; }
+    .btn.warning:hover {
+      background-color: #feb4a2; }
   .btn.info {
     background-color: #927BC1; }
-  .btn:hover {
-    background-color: red; }
+    .btn.info:hover {
+      background-color: #bdafd9; }
   @media (min-width: 768px) {
     .btn {
       padding: 0.625em 1.875em; }
@@ -405,7 +420,7 @@ a {
     margin: 0.625em auto 0;
     border: none;
     padding: 0.625em;
-    border-bottom: 0.35em solid #58E1C1; }
+    border-bottom: 0.3125em solid #58E1C1; }
     .form .input:focus {
       outline: 0; }
   .form .hidden {
@@ -430,10 +445,7 @@ a {
   padding: 0 0.625em; }
   @media (min-width: 768px) {
     .container {
-      max-width: 1400px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto; } }
+      max-width: 1400px; } }
 
 .row {
   display: flex;
@@ -449,7 +461,7 @@ a {
   flex-basis: 100%;
   min-height: 1.5625em;
   padding: 0.625em;
-  border-radius: 0.35em; }
+  border-radius: 0.3125em; }
   @media (min-width: 768px) {
     [class^=col] {
       display: flex;
@@ -459,40 +471,30 @@ a {
       [class^=col] + [class^=col] {
         margin-left: 0.625em; } }
 
-.theme.col-1 {
+.col-1.theme {
   background-color: #927BC1; }
-.theme.col-2 {
+.col-2.theme {
   background-color: #FD7856; }
-.theme.col-3 {
+.col-3.theme {
   background-color: #DEB2EE; }
-.theme.col-4 {
+.col-4.theme {
   background-color: #7EE6FD; }
-.theme.col-5 {
+.col-5.theme {
   background-color: #88D9A0; }
-.theme.col-6 {
+.col-6.theme {
   background-color: #4DA2BB; }
-.theme.col-7 {
+.col-7.theme {
   background-color: #EC9FA3; }
-.theme.col-8 {
+.col-8.theme {
   background-color: #FD9F85; }
-.theme.col-9 {
+.col-9.theme {
   background-color: #E4757A; }
-.theme.col-10 {
+.col-10.theme {
   background-color: #63CC82; }
-.theme.col-11 {
+.col-11.theme {
   background-color: #51DDFC; }
-.theme.col-12 {
+.col-12.theme {
   background-color: #80E8D1; }
-
-.card {
-  flex-basis: 100%; }
-
-@media (min-width: 768px) {
-  .centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; } }
-
 @media (min-width: 768px) {
   .col-1 {
     flex-basis: 8.3333333333%; }
@@ -518,5 +520,8 @@ a {
     flex-basis: 91.6666666667%; }
   .col-12 {
     flex-basis: 100%; } }
+
+.card {
+  flex-basis: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

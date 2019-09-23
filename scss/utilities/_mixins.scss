@@ -17,12 +17,26 @@
     }
 }
 
-// Generate modifier color classes
-@mixin bg-colors($map) {
+// Generate modifier color classes, using Sass map
+@mixin btn-bg-colors($map, $per: 0%) {
+
     @each $key,
     $color in $map {
         &.#{$key} {
             background-color: $color;
+
+            &:hover {
+                background-color: lighten($color, $per);
+            }
+        }
+    }
+}
+
+// Generate modifier color classes, using Sass list
+@mixin theme-bg-colors($colors) {
+    @for $i from 1 through 12 {
+        &-#{$i}.theme {
+            background-color: nth($colors, $i);
         }
     }
 }
